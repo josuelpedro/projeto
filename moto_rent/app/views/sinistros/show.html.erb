@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Preco:</strong>
+  <%= @sinistro.preco %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @sinistro.status %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @sinistro.tipo %>
+</p>
+
+<p>
+  <strong>Descrição:</strong>
+  <%= @sinistro.descrição %>
+</p>
+
+<p>
+  <strong>Alugue:</strong>
+  <%= @sinistro.alugue_id %>
+</p>
+
+<%= link_to 'Edit', edit_sinistro_path(@sinistro) %> |
+<%= link_to 'Back', sinistros_path %>

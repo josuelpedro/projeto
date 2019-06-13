@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Preco:</strong>
+  <%= @alugue.preco %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @alugue.status %>
+</p>
+
+<p>
+  <strong>Data retirada:</strong>
+  <%= @alugue.data_retirada %>
+</p>
+
+<p>
+  <strong>Data devolucao:</strong>
+  <%= @alugue.data_devolucao %>
+</p>
+
+<p>
+  <strong>Moto:</strong>
+  <%= @alugue.moto_id %>
+</p>
+
+<p>
+  <strong>Cliente:</strong>
+  <%= @alugue.cliente_id %>
+</p>
+
+<%= link_to 'Edit', edit_alugue_path(@alugue) %> |
+<%= link_to 'Back', alugues_path %>

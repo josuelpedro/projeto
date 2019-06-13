@@ -1,0 +1,47 @@
+<%= form_with(model: alugue, local: true) do |form| %>
+  <% if alugue.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(alugue.errors.count, "error") %> prohibited this alugue from being saved:</h2>
+
+      <ul>
+      <% alugue.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :preco %>
+    <%= form.text_field :preco %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.check_box :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_retirada %>
+    <%= form.datetime_select :data_retirada %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_devolucao %>
+    <%= form.datetime_select :data_devolucao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :moto_id %>
+    <%= form.number_field :moto_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cliente_id %>
+    <%= form.number_field :cliente_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

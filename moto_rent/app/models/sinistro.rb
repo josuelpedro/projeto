@@ -1,0 +1,2 @@
+class Sinistro < ApplicationRecord
+end

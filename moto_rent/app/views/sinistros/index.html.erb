@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sinistros</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Preco</th>
+      <th>Status</th>
+      <th>Tipo</th>
+      <th>Descrição</th>
+      <th>Alugue</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sinistros.each do |sinistro| %>
+      <tr>
+        <td><%= sinistro.preco %></td>
+        <td><%= sinistro.status %></td>
+        <td><%= sinistro.tipo %></td>
+        <td><%= sinistro.descrição %></td>
+        <td><%= sinistro.alugue_id %></td>
+        <td><%= link_to 'Show', sinistro %></td>
+        <td><%= link_to 'Edit', edit_sinistro_path(sinistro) %></td>
+        <td><%= link_to 'Destroy', sinistro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sinistro', new_sinistro_path %>

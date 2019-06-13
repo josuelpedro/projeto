@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Alugues</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Preco</th>
+      <th>Status</th>
+      <th>Data retirada</th>
+      <th>Data devolucao</th>
+      <th>Moto</th>
+      <th>Cliente</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @alugues.each do |alugue| %>
+      <tr>
+        <td><%= alugue.preco %></td>
+        <td><%= alugue.status %></td>
+        <td><%= alugue.data_retirada %></td>
+        <td><%= alugue.data_devolucao %></td>
+        <td><%= alugue.moto_id %></td>
+        <td><%= alugue.cliente_id %></td>
+        <td><%= link_to 'Show', alugue %></td>
+        <td><%= link_to 'Edit', edit_alugue_path(alugue) %></td>
+        <td><%= link_to 'Destroy', alugue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Alugue', new_alugue_path %>
